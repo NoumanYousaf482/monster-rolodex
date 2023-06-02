@@ -10,16 +10,20 @@ class App extends Component {
     this.state={
       monster:[ 
       {
-        name:'linda'
+        name:'linda',
+        id:'1',
       },
       {
-        name: 'Frank'
+        name: 'Frank',
+        id:'2',
       },
       {
-        name: 'Jacky'
+        name: 'Jacky',
+        id:'3',
       },
       {
-        name: 'Andrie'
+        name: 'Andrie',
+        id:'4',
       },
      ],
     };
@@ -28,11 +32,13 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        {
-          this.state.monster.map((monster)=>{
-            return<h1>{monster.name}</h1>;
-          })
-        }
+        {this.state.monster.map((monster) =>{
+          return (
+            <div key={monster.id}>
+              <h1>{monster.name}</h1>
+            </div>
+          );
+        } )}
       </div>
     )
   }
