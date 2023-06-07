@@ -49,7 +49,7 @@ class App extends Component {
     return (
       <div className='App'>
         <SearchBox
-        className= 'Search-Box'
+        className= 'monsters-Search-Box'
         onChangeHandler={onSearchChange} 
         placeholder='search monsters'
         />
